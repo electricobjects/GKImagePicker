@@ -164,6 +164,11 @@
     }
 }
 
+- (void)showCameraImagePickerOnViewController:(UIViewController *)viewController {
+    self.presentingViewController = viewController;
+    [self showCameraImagePicker];
+}
+
 - (void)showCameraImagePicker {
 
 #if TARGET_IPHONE_SIMULATOR
@@ -184,6 +189,11 @@
     [self presentImagePickerController];
 #endif
 
+}
+
+- (void)showGalleryImagePickerOnViewController:(UIViewController *)viewController {
+    self.presentingViewController = viewController;
+    [self showGalleryImagePicker];
 }
 
 - (void)showGalleryImagePicker {
