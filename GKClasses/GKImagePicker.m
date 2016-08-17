@@ -33,7 +33,9 @@
         
         self.cropSize = CGSizeMake(320, 320);
         self.resizeableCropArea = NO;
-        
+        self.toolBarFont =  [UIFont systemFontOfSize:18.f];
+        self.cropLineColor = [UIColor colorWithRed:1. green:1. blue:1. alpha:0.5];
+        self.cropLineThickness = 1.0;
     }
     return self;
 }
@@ -70,6 +72,8 @@
     cropController.maxWidthRatio = self.maxWidthRatio;
     cropController.minWidthRatio = self.minWidthRatio;
     cropController.toolBarFont = self.toolBarFont;
+    cropController.cropLineThickness = self.cropLineThickness;
+    cropController.cropLineColor = self.cropLineColor;
     
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
     cropController.preferredContentSize = picker.preferredContentSize;

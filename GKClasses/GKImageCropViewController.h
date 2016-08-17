@@ -22,6 +22,8 @@
 @property (nonatomic, assign) float maxWidthRatio;
 @property (nonatomic, assign) float minWidthRatio;
 @property (nonatomic, strong) UIFont *toolBarFont;
+@property (nonatomic, assign) CGFloat cropLineThickness;
+@property (nonatomic, strong) UIColor *cropLineColor;
 
 @end
 

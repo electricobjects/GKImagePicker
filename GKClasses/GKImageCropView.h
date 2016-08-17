@@ -20,6 +20,8 @@
 @property (nonatomic, assign) BOOL enforceRatioLimits;
 @property (nonatomic, assign) float maxWidthRatio;
 @property (nonatomic, assign) float minWidthRatio;
+@property (nonatomic, assign) CGFloat cropLineThickness;
+@property (nonatomic, strong) UIColor *cropLineColor;
 
 - (UIImage *)croppedImage;
 

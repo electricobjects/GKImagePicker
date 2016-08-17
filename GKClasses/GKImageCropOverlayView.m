@@ -31,6 +31,8 @@
 
         self.backgroundColor = [UIColor clearColor];
         self.userInteractionEnabled = YES;
+        self.cropLineColor = [UIColor colorWithRed:1. green:1. blue:1. alpha:0.5];
+        self.cropLineThickness = 4;
     }
     return self;
 }
@@ -52,14 +54,15 @@
     UIRectFill(self.bounds);
     
     //fill inner border
-    [[UIColor colorWithRed:1. green:1. blue:1. alpha:0.5] set];
+    [self.cropLineColor set];
 //    UIRectFrame(CGRectMake(widthSpan - 2, heightSpan - 2, self.cropSize.width + 4, self.cropSize.height + 4));
-    UIRectFrame(CGRectMake(widthSpan, heightSpan, self.cropSize.width, self.cropSize.height));
+    UIRectFill(CGRectMake(widthSpan - self.cropLineThickness, heightSpan - self.cropLineThickness, self.cropSize.width + self.cropLineThickness*2, self.cropSize.height + self.cropLineThickness*2));
+    
     
     //fill inner rect
     [[UIColor clearColor] set];
 //    UIRectFill(CGRectMake(widthSpan + 2, heightSpan + 2, self.cropSize.width - 4, self.cropSize.height - 4));
-    UIRectFill(CGRectMake(widthSpan + 1, heightSpan + 1, self.cropSize.width - 2, self.cropSize.height - 2));
+    UIRectFill(CGRectMake(widthSpan, heightSpan, self.cropSize.width, self.cropSize.height));
     
 }
 

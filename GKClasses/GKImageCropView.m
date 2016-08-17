@@ -87,8 +87,11 @@ static CGRect GKScaleRect(CGRect rect, CGFloat scale)
             resizeableView.minWidthRatio = self.minWidthRatio;
             self.cropOverlayView = resizeableView;
         }
-        else
+        else {
             self.cropOverlayView = [[GKImageCropOverlayView alloc] initWithFrame:self.bounds];
+            self.cropOverlayView.cropLineThickness = self.cropLineThickness;
+            self.cropOverlayView.cropLineColor = self.cropLineColor;
+        }
         
         [self addSubview:self.cropOverlayView];
     }
