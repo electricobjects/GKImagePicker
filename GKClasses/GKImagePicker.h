@@ -19,6 +19,7 @@
 @property (nonatomic, assign) float maxWidthRatio;
 @property (nonatomic, assign) float minWidthRatio;
 @property (nonatomic, assign) BOOL useFrontCameraAsDefault;
+@property (nonatomic, strong) UIFont *toolBarFont;
 
 - (void)showActionSheetOnViewController:(UIViewController *)viewController onPopoverFromView:(UIView *)popoverView;
 - (void)showGalleryImagePickerOnViewController:(UIViewController *)viewController;

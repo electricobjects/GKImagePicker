@@ -68,6 +68,7 @@
                                                                                           target:self 
                                                                                           action:@selector(_actionCancel)];
     
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Use", @"Use")
                                                                               style:UIBarButtonItemStylePlain
                                                                              target:self 
@@ -129,7 +130,7 @@
 
 - (UIFont *)buttonFont
 {
-    return  [UIFont systemFontOfSize:18.f];
+    return self.toolBarFont;
 }
 
 - (void)_setupCancelButton{
@@ -186,6 +187,7 @@
     self = [super init];
     if (self) {
         // Custom initialization
+        self.toolBarFont =  [UIFont systemFontOfSize:18.f];
     }
     return self;
 }

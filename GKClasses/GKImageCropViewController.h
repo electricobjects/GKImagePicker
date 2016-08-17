@@ -21,6 +21,7 @@
 @property (nonatomic, assign) BOOL enforceRatioLimits;
 @property (nonatomic, assign) float maxWidthRatio;
 @property (nonatomic, assign) float minWidthRatio;
+@property (nonatomic, strong) UIFont *toolBarFont;
 
 @end
 

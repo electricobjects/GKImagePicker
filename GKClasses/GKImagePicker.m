@@ -33,6 +33,7 @@
         
         self.cropSize = CGSizeMake(320, 320);
         self.resizeableCropArea = NO;
+        
     }
     return self;
 }
@@ -68,6 +69,7 @@
     cropController.enforceRatioLimits = self.enforceRatioLimits;
     cropController.maxWidthRatio = self.maxWidthRatio;
     cropController.minWidthRatio = self.minWidthRatio;
+    cropController.toolBarFont = self.toolBarFont;
     
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
     cropController.preferredContentSize = picker.preferredContentSize;
